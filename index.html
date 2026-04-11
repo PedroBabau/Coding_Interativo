@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Coding — p5.js Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav>
+  <div class="nav-logo">creative<span>.</span>lab</div>
+  <div class="nav-tag">p5.js / Interactive</div>
+</nav>
+
+<main>
+  <section class="hero">
+    <div class="hero-eyebrow">Projeto 1 — Creative Coding</div>
+    <h1>
+      <span class="line1">CODING</span><br>
+      <span class="line2">INTER</span><br>
+      <span class="line3">ATIVO</span>
+    </h1>
+    <p class="hero-desc">
+      Dois projetos interativos desenvolvidos com p5.js — explorando sistemas dinâmicos, 
+      interação em tempo real e design de interfaces generativas.
+    </p>
+    <a href="#gallery" class="hero-scroll">
+      <span class="arrow">↓</span>
+      Ver projetos
+    </a>
+  </section>
+
+  <section class="section" id="gallery">
+    <div class="section-label">— 02 projetos interativos</div>
+    <div class="gallery">
+
+      <!-- CARD 1 -->
+      <a href="/projetos/projeto1/index.html" class="card card-1">
+        <div class="card-preview">
+          <canvas class="card-preview-canvas" id="preview1"></canvas>
+          <div class="card-overlay"></div>
+          <div class="card-num">01</div>
+          <div class="card-accent"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-tag">Projeto 01</div>
+          <h2 class="card-title">Particle<br>Storm</h2>
+          <p class="card-desc">
+            Sistema de partículas generativo controlado pelo rato e teclado. 
+            Cria campos de força, explosões e padrões visuais em tempo real.
+          </p>
+          <div class="card-features">
+            <span class="feat-pill">Mouse</span>
+            <span class="feat-pill">Teclado</span>
+            <span class="feat-pill">GUI Controls</span>
+            <span class="feat-pill">Partículas</span>
+          </div>
+          <span class="card-cta">Abrir projeto →</span>
+        </div>
+      </a>
+
+      <!-- CARD 2 -->
+      <a href="/projetos/projeto2/index.html" class="card card-2">
+        <div class="card-preview">
+          <canvas class="card-preview-canvas" id="preview2"></canvas>
+          <div class="card-overlay"></div>
+          <div class="card-num">02</div>
+          <div class="card-accent"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-tag">Projeto 02</div>
+          <h2 class="card-title">Sound<br>Painter</h2>
+          <p class="card-desc">
+            Pintura generativa reativa ao som do microfone e à câmara. 
+            O áudio e o vídeo moldam pinceladas em tempo real.
+          </p>
+          <div class="card-features">
+            <span class="feat-pill">Microfone</span>
+            <span class="feat-pill">Câmara</span>
+            <span class="feat-pill">Mouse</span>
+            <span class="feat-pill">GUI Controls</span>
+          </div>
+          <span class="card-cta">Abrir projeto →</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label">— sobre o projeto</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Este portfólio foi desenvolvido no âmbito da unidade curricular de 
+        <strong>Edições Multimédia Interativa com p5.js</strong>. Cada projeto explora diferentes 
+        formas de interação entre o utilizador e o sistema, criando experiências 
+        visuais únicas e dinâmicas.</p>
+        <br>
+        <p>Os projetos seguem os princípios de <strong>design responsivo</strong>, 
+        adaptando-se a diferentes dispositivos e tamanhos de ecrã, e implementam 
+        múltiplos tipos de interação para uma experiência imersiva.</p>
+      </div>
+      <ul class="tech-list">
+        <li class="tech-item">p5.js — biblioteca principal</li>
+        <li class="tech-item">p5.sound — processamento de áudio</li>
+        <li class="tech-item">HTML5 / CSS3 — estrutura e estilo</li>
+        <li class="tech-item">JavaScript ES6+ — lógica interativa</li>
+        <li class="tech-item">Design responsivo — multi-ecrã</li>
+        <li class="tech-item">GitHub Pages — <a href="https://github.com"> Coding Interativo </a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>creative.lab — p5.js portfolio</span>
+  <span>ISTEC · Edições Multimédia Interativas · 2026</span>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

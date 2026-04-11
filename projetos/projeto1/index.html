@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Particle Storm — Projeto 01</title>
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.min.js"></script>
+</head>
+<body>
+
+<div id="p5-canvas-container"></div>
+
+<div class="topbar">
+  <div class="topbar-title">Particle<span>Storm</span></div>
+  <a href="../index.html" class="back-btn">← voltar</a>
+</div>
+
+<div class="gui" id="gui">
+  <button class="gui-toggle" id="gui-toggle" title="Mostrar/esconder controlos">⊞</button>
+  <div class="gui-title">Controlos</div>
+
+  <div class="ctrl">
+    <div class="ctrl-label">Partículas <span id="val-count">150</span></div>
+    <input type="range" id="sl-count" min="20" max="400" value="150">
+  </div>
+
+  <div class="ctrl">
+    <div class="ctrl-label">Velocidade <span id="val-speed">1.5</span></div>
+    <input type="range" id="sl-speed" min="0.2" max="5" step="0.1" value="1.5">
+  </div>
+
+  <div class="ctrl">
+    <div class="ctrl-label">Tamanho <span id="val-size">3</span></div>
+    <input type="range" id="sl-size" min="1" max="10" step="0.5" value="3">
+  </div>
+
+  <div class="ctrl">
+    <div class="ctrl-label">Ligações <span id="val-conn">120</span></div>
+    <input type="range" id="sl-conn" min="0" max="300" value="120">
+  </div>
+
+  <div class="ctrl">
+    <div class="ctrl-label">Cor</div>
+    <select id="sel-color">
+      <option value="green">Verde néon</option>
+      <option value="pink">Rosa néon</option>
+      <option value="cyan">Ciano</option>
+      <option value="rainbow">Arco-íris</option>
+      <option value="fire">Fogo</option>
+    </select>
+  </div>
+
+  <div class="btn-grid">
+    <button class="gui-btn active" id="btn-attract">Atrair</button>
+    <button class="gui-btn" id="btn-repel">Repelir</button>
+    <button class="gui-btn active" id="btn-trail">Rastro</button>
+    <button class="gui-btn" id="btn-burst">Burst</button>
+  </div>
+</div>
+
+<div class="hints">
+  <div><span class="key">Mouse</span> Atrair/repelir partículas</div>
+  <div><span class="key">C</span> Limpar tela</div>
+  <div><span class="key">Space</span> Explodir todas</div>
+  <div><span class="key">R</span> Resetar</div>
+  <div><span class="key">+/-</span> Mais/menos partículas</div>
+</div>
+
+<div class="stats">
+  <div id="stat-fps">FPS: --</div>
+  <div id="stat-parts">Partículas: --</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

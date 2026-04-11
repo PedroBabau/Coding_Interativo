@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sound Painter — Projeto 02</title>
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/addons/p5.sound.min.js"></script>
+</head>
+<body>
+
+<div id="p5-canvas-container"></div>
+
+<!-- PERMISSION MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <div class="modal-icon">🎙️</div>
+    <div class="modal-title">Sound Painter</div>
+    <p class="modal-desc">
+      Este projeto usa o <strong>microfone</strong> e a <strong>câmara</strong> para criar 
+      pinturas generativas reativas ao som e ao movimento. Podes também usar apenas o rato.
+    </p>
+    <div class="modal-btns">
+      <button class="modal-btn primary" id="btn-allow-all">Ativar Mic + Câmara</button>
+      <button class="modal-btn" id="btn-allow-mic">Só Microfone</button>
+      <button class="modal-btn" id="btn-no-perm">Apenas Rato</button>
+    </div>
+  </div>
+</div>
+
+<div class="topbar">
+  <div class="topbar-title">Sound<span>Painter</span></div>
+  <a href="../index.html" class="back-btn">← voltar</a>
+</div>
+
+<div class="status">
+  <div class="status-pill"><div class="status-dot" id="dot-mic"></div>Microfone</div>
+  <div class="status-pill"><div class="status-dot" id="dot-cam"></div>Câmara</div>
+</div>
+
+<div class="gui" id="gui">
+  <button class="gui-toggle" id="gui-toggle">⊞</button>
+  <div class="gui-title">Controlos</div>
+
+  <div class="ctrl">
+    <div class="ctrl-label">Sensibilidade <span id="val-sens">5</span></div>
+    <input type="range" id="sl-sens" min="1" max="10" step="0.5" value="5">
+  </div>
+
+  <div class="ctrl">
+    <div class="ctrl-label">Tamanho pincel <span id="val-brush">20</span></div>
+    <input type="range" id="sl-brush" min="2" max="80" value="20">
+  </div>
+
+  <div class="ctrl">
+    <div class="ctrl-label">Transparência <span id="val-alpha">70</span></div>
+    <input type="range" id="sl-alpha" min="10" max="100" value="70">
+  </div>
+
+  <div class="ctrl">
+    <div class="ctrl-label">Velocidade <span id="val-vel">3</span></div>
+    <input type="range" id="sl-vel" min="1" max="10" value="3">
+  </div>
+
+  <div class="ctrl">
+    <div class="ctrl-label">Estilo</div>
+    <select id="sel-style">
+      <option value="circles">Círculos</option>
+      <option value="lines">Linhas</option>
+      <option value="splatter">Splatter</option>
+      <option value="wave">Ondas</option>
+    </select>
+  </div>
+
+  <div class="btn-grid">
+    <button class="gui-btn active" id="btn-reactive">Reativo</button>
+    <button class="gui-btn active" id="btn-auto">Auto-pintar</button>
+    <button class="gui-btn" id="btn-invert">Inverter</button>
+    <button class="gui-btn" id="btn-clear">Limpar</button>
+  </div>
+</div>
+
+<div class="viz-bar" id="viz-bar">
+  <!-- bars added by JS -->
+</div>
+
+<div class="hints">
+  <div>Clica e arrasta para pintar<span class="key">Mouse</span></div>
+  <div>Limpar tela<span class="key">C</span></div>
+  <div>Guardar imagem<span class="key">S</span></div>
+  <div>Inverter cores<span class="key">I</span></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
